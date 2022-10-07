@@ -3,7 +3,7 @@ require('dotenv').config()
 module.exports = {
   dev: {},
   test: {
-    api_url: 'https://www.atlassian.com/software/jira',
+    api_url: `https://${process.env.PROJECTNAME}.atlassian.net`,
     users: {
       user: {
         username: process.env.USER,

@@ -1,5 +1,7 @@
 require('dotenv').config()
-const config = require('../atm-jira-api/config')
+require('module-alias/register')
+
+const config = require('@config')
 const env = require('../atm-jira-api/env')[config.env]
 
 console.log('Starting this project....')
