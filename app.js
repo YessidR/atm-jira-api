@@ -1,10 +1,10 @@
 // require('dotenv').config()
 require('module-alias/register')
-
-const config = require('@config')
-const env = require('../atm-jira-api/env')[config.env]
+const env = require('@envManager')
 
 console.log('Starting this project....')
 console.log('Variables JS')
 console.log(env)
-console.log(env.users.user)
+console.log('Fin vbles JS')
+this.user = new env.Env()
+console.log(this.user.username)
