@@ -1,9 +1,10 @@
 require('dotenv').config()
+require('module-alias/register')
 
 module.exports = {
   dev: {},
   test: {
-    api_url: `https://${process.env.PROJECTNAME}.atlassian.net`,
+    api_url: process.env.URL,
     users: {
       user: {
         username: process.env.USER,

@@ -2,3 +2,5 @@
 *.env
 *.dotenv
 *.eslintrc.js
+*.log
+/reports/report.html
