@@ -1,0 +1,13 @@
+{
+    "fields": {
+        "project":
+            {
+                "key": "AUT"
+            },
+        "summary": "Created automated by API",
+        "description": "For automation testing only",
+        "issuetype": {
+            "name": "Bug"
+        }
+    }
+}

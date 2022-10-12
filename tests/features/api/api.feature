@@ -9,5 +9,5 @@ Feature: Issues
 
     Scenario: A user can verify an existing Issue
         Given An issue previously created
-        When the user send a "GET" to "/rest/api/3/issue/AUT-1"
+        When the user send a "GET" to "/rest/api/3/issue/"
         Then the status code should be 200

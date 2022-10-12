@@ -12,12 +12,33 @@ const env = require('@envManager')
  * @param {string} token Bearer token
  * @returns Response object
  */
-async function send (httpMethod, endPoint) {
-  logger.debug(`Sending ${httpMethod} request to ${endPoint}`)
-  const user = new env.Env()
-  const response = await superagent(httpMethod, `${user.api_url}${endPoint}`)
-    .auth(user.username, user.token)
-  return response
+
+class Api {
+  async get (httpMethod, endPoint, id) {
+    logger.debug(`Sending ${httpMethod} request to ${endPoint}...`)
+    const user = new env.Env()
+    const response = await superagent(httpMethod, `${user.api_url}${endPoint}${id}`)
+      .auth(user.username, user.token)
+    return response
+  } // get method
+
+  async post (httpMethod, endPoint, body) {
+    logger.debug(`Sending ${httpMethod} request to ${endPoint}...`)
+    const user = new env.Env()
+    const response = await superagent(httpMethod, `${user.api_url}${endPoint}`)
+      .auth(user.username, user.token)
+      .send(body)
+    return response
+  } // post method
+
+  async delete (httpMethod, endPoint, id) {
+    logger.debug(`Sending ${httpMethod} request to ${endPoint}...`)
+    const user = new env.Env()
+    const response = await superagent(httpMethod, `${user.api_url}${endPoint}${id}`)
+      .auth(user.username, user.token)
+    return response
+  } // delete method
 }
 
-module.exports = { send }
+const api = new Api()
+module.exports = { api }

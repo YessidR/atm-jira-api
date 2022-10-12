@@ -22,6 +22,7 @@
   "dependencies": {
     "@cucumber/cucumber": "^8.6.0",
     "@cucumber/pretty-formatter": "^1.0.0",
+    "chai": "^4.3.6",
     "dotenv": "^16.0.3",
     "flat": "^5.0.2",
     "http-status-codes": "^2.2.0",
@@ -44,6 +45,9 @@
     "@env": "env.js",
     "@logger": "core/utils/logger.js",
     "@envManager": "core/utils/env_manager.js",
-    "@reqManager": "core/api/request_manager.js"
+    "@reqManager": "core/api/request_manager.js",
+    "@httpMethods": "core/api/http_methods.js",
+    "@issues": "main/resources/issues.json",
+    "@parser": "core/utils/parser.js"
   }
 }

@@ -1,5 +1,5 @@
-// require('dotenv').config()
 require('module-alias/register')
+
 const env = require('@envManager')
 
 console.log('Starting this project....')
